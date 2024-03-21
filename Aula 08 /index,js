@@ -25,11 +25,11 @@ createApp( {
                     break;
 
                 case 'C':
-                    this.Limpar();
+                    this.lidarLimpar();
                     break;
                 
                 case '=':
-                    this.Igual();
+                    this.lidarIgual();
                     break;
 
                 default:
@@ -37,7 +37,26 @@ createApp( {
 
                 
             }
+        },
+        lidarOperador() {
+            console.log("O botão digitado foi: ", valor);
+        },
+        lidarDecimal() {
+            console.log("Entrou no decimal");
+        },
+        lidarLimpar() {
+            this.display = '0';
+            this.numeroAtual = null;
+            this.numeroAnterior = null;
+            this.operador = null;
+        },
+        lidarIgual() {
+            console.log("Entrou no igual");
+        },
+        lidarNumero(valor) {
+            console.log("O botão digitado foi: ", valor);
         }
+
 
     }
 
