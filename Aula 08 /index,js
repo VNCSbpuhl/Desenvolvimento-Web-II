@@ -1,1 +1,44 @@
+const { createApp} =  vue;
 
+createApp( {
+    data() {
+        return{
+            display: "0",
+            numeroAnterior: null,
+            operador: null
+
+        }
+    },
+    methods: {
+        LidarBotao(botao) {
+            switch (botao)
+            {
+                case '*':
+                case '%':
+                case '-':
+                case '+':
+                    this.lidarOperador(botao);
+                    break;
+                
+                case '.':
+                    this.lidarDecimal();
+                    break;
+
+                case 'C':
+                    this.Limpar();
+                    break;
+                
+                case '=':
+                    this.Igual();
+                    break;
+
+                default:
+                    this.lidarNumero(botao);
+
+                
+            }
+        }
+
+    }
+
+}).mount("#app");
