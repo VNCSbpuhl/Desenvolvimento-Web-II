@@ -12,4 +12,4 @@ createApp( {
             return (this.firstName + " " + this.lastName)
         }
     }
-})
+}).mount("#app");
