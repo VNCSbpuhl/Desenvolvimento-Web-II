@@ -17,6 +17,13 @@
     <input type="text" v-model="firstName">
     <label>Sobrenome</label>
     <input type="text" v-model="lastName">
+    <hr>
+
+    <input type="button" value="Ligar" @click="onOff()"> 
+    <input type="text" v-model="interruptor">
+    <br>
+    <img v-if="status == false" src="off.png" width="250px">
+    <img v-else src="on.png" width="250px">
 </div>
     
 </body>
